@@ -1,0 +1,55 @@
+# TODO la funcion obtener complento que retorna el complemento de una base
+
+def obtener_complemento(letra):
+    """
+    (str) -> str
+
+     'Recibe una letra y retorna su complemento'
+
+    >>> obtener_complemento('A')
+    'T'
+    >>> obtener_complemento('G')
+    'C'
+    >>> obtener_complemento('T')
+    'A'
+
+    #>>> obtener_complemento('Z')
+    #G
+     :param letra: Un valor de una cadena de ADN
+    :return: El complemento de la candena del ADN
+    """
+    if letra == 'A':
+        return 'T'
+    elif letra == 'T':
+        return 'A'
+    elif letra == 'G':
+        return 'C'
+    elif letra == 'C':
+        return 'G'
+    else: 'No es un complemento'
+
+# TODO la funcion para generar la cadena complementaria
+
+def cadena_complemantaria(cadena):
+    '''
+
+    (str) ->  str
+
+    >>> cadena_complemantaria('ATGC')
+    'TACG'
+
+    >>> cadena_complemantaria('GATC')
+    'CTAG'
+
+    >>> cadena_complemantaria('CA')
+    'GT'
+
+
+    :param str:
+    :return:
+    '''
+
+    resultado = ['']
+    for letra in cadena:
+        resultado.append(obtener_complemento(cadena))
+    return resultado
