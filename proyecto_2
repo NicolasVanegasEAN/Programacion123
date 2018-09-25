@@ -1,0 +1,123 @@
+# TODO la funcion obtener complento que retorna el complemento de una base
+
+def obtener_complemento(letra):
+    """
+    (str) -> str
+
+    'Recibe una letra y retorna su complemento'
+
+    >>> obtener_complemento('A')
+    'T'
+
+    >>> obtener_complemento('G')
+    'C'
+
+    >>> obtener_complemento('T')
+    'A'
+
+    #>>> obtener_complemento('Z')
+    #G
+
+    :param letra: Un valor de una cadena de ADN
+    :return: El complemento de la candena del ADN
+    """
+
+    if letra == 'A':
+        return 'T'
+    elif letra =='T':
+        return 'A'
+    elif letra == 'G':
+        return 'C'
+    elif letra == 'C':
+        return 'G'
+    else: 'No es un complemento'
+
+# TODO la funcion para generar la cadena complementaria
+def cadena_complemantaria(cadena):
+    '''
+    
+    (str) ->  str
+    
+    >>> cadena_complemantaria('ATGC')
+    'TACG'
+    
+    >>> cadena_complemantaria('GATC')
+    'CTAG'
+    
+    >>> cadena_complemantaria('CA')
+    'GT'
+    
+    :param str:
+    :return:
+    '''
+    
+    resultado = ""
+    for letra in cadena:
+        resultado += obtener_complemento(letra)
+    return resultado
+
+# TODO la funcion para validar una base
+
+def validar_base(cadena):
+    '''
+
+    str -> boolean
+
+    >>> validar_base('ATGC')
+    True
+
+    >>> validar_base('ATGZ')
+    False
+
+    'recibe una cadena y verifica si es base o no'
+    :param cadena:
+    :return: boolean
+    '''
+    resultado = ""
+    for letra in cadena:
+        resultado = es_base(letra)
+    return resultado
+
+
+# TODO la funcion para calcular el porcentaje de correspondencia de una cadena y otra
+# TODO la funcion que nos valida la correspondencia entre dos cadenas
+
+def complemento_entrecadena(cadena):
+    '''
+
+    (str)-> str
+
+    >>> complemento_entrecadena('ATGC')
+    'TACG'
+
+    >>> complemento_entrecadena('GATC')
+    'CTAG'
+
+    >>> complemento_entrecadena('TGCA')
+    'ACGT'
+
+    :param cadena:
+    :return:
+    '''
+
+# TODO la funcion para validar si todos las bases son validas en la cadena
+
+# TODO funcion es base
+
+def es_base(letra):
+    '''
+
+    (str) -> str
+
+    'recibe una letra y verifica si es base o no'
+    :param letra: La letra a la que se va a validar
+    :return: str-> es o no es base
+
+    >>> es_base('A')
+    True
+    >>> es_base('G')
+    True
+    >>> es_base('B')
+    False
+    '''
+    return letra in "ATCG"
