@@ -1,0 +1,44 @@
+def de_la_z_a_la_a():
+    '''
+
+    ()-> list of str
+
+    >>> de_la_z_a_la_a()
+    ['z', 'y', 'x', 'w', 'v', 'u', 't', 's', 'r', 'q', 'p', 'o', 'n', 'm', 'l', 'k', 'j', 'i', 'h', 'g', 'f', 'e', 'd', 'c', 'b', 'a']
+
+    :return:
+    '''
+
+    resultado = []
+    contador = 122
+    while contador > 96:
+        resultado.append(chr(contador))
+        contador -= 1
+    return resultado
+    
+    #kskaks
+    
+    def suma_pares(inferior, superior):
+    '''
+
+    (int, int) -> int
+
+
+    >>> suma_pares(0,10)
+    30
+
+    >>> suma_pares(2,5)
+    6
+
+    :param num1:
+    :param num2:
+    :return:
+    '''
+
+    acomulador = 0
+    contador = inferior
+    while contador <= superior:
+        if contador%2 == 0:
+            acomulador += contador
+        contador +=1
+    return acomulador
