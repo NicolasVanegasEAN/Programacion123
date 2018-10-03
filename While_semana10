@@ -1,3 +1,5 @@
+#Funcion que retorne una lista de las letras de la 'z' a la 'a'
+
 def de_la_z_a_la_a():
     '''
 
@@ -16,9 +18,9 @@ def de_la_z_a_la_a():
         contador -= 1
     return resultado
     
-    #kskaks
-    
-    def suma_pares(inferior, superior):
+    #Funcion que encuentre la suma de todos los numeros pares, dado un rango
+
+def suma_pares(inferior, superior):
     '''
 
     (int, int) -> int
@@ -42,3 +44,88 @@ def de_la_z_a_la_a():
             acomulador += contador
         contador +=1
     return acomulador
+    
+    #Funcion que cuente los digitos en un numero
+
+def digitos(numero):
+    '''
+
+    (int) -> int
+
+
+    >>> digitos(10)
+    2
+
+    >>> digitos(1967)
+    4
+
+    >>> digitos(-20)
+    2
+
+    >>> digitos(0)
+    1
+
+    :param numero:
+    :return:
+    '''
+
+    contador = 1
+    copia = abs(numero)
+    while copia >= 10:
+        contador += 1
+        copia //= 10
+    return contador
+    
+    #Funcion que sume  los digitos de un numero
+    
+    def sume_digitos(numero):
+    '''
+
+    >>> sume_digitos(10)
+    1
+
+    :param numeros:
+    :return:
+    '''
+
+    acomulador = 1
+    copia = abs(numero)
+    while copia > 10:
+        acomulador += copia %10
+        acomulador > 0
+    return acomulador
+    
+    #Funcion que genere una lista con los digitos de un numero
+    
+    def lista_digitos(numero):
+    """
+    (int) -> int
+
+    Cuenta el numero de digitos dado un entero
+
+     >>> lista_digitos(10)
+    [1, 0]
+
+    >>> lista_digitos(1967)
+    [1, 9, 6, 7]
+
+    >>> lista_digitos(-20)
+    [-2, 0]
+
+    >>> lista_digitos(0)
+    [0]
+     :param numero:
+    :return:
+    """
+
+    if numero == 0:
+        return [0]
+    acumulador = []
+    bandera_neg = numero < 0
+    copia = abs(numero)
+    while copia > 0:
+        acumulador.insert(0, copia % 10)
+        copia //= 10
+    if bandera_neg:
+        acumulador[0] *= -1
+    return acumulador
