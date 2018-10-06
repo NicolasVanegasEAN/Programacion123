@@ -129,3 +129,17 @@ def digitos(numero):
     if bandera_neg:
         acumulador[0] *= -1
     return acumulador
+    
+    
+    #Hacer un programa que le pregunte al usuario numeros, si el usuario ingresa uan palabra debe terminar la ejecucion
+    while, try
+    break
+    
+    while True:
+    num = input("Ingrese un numero")
+    try:
+        num = float(num)
+        print(num)
+    except:
+        break
+print("Dejo de insertar numeros")
