@@ -1,0 +1,7 @@
+Subir en este espacio el archivo .py de su chatbot versión procedimental donde soporte un archivo para el conocimiento y otro para las despedidas, ud debería tener:
+
+Una función cargar diccionario que recibe el nombre del archivo y retorna el diccionario asociado
+Una función guardar diccionario que recibe el nombre del archivo y el diccionario y retorna True si el guardado fue exitoso
+Una funcion main que ejecuta la logica de su chat bot
+Al momento de aprender algo el bot debe preguntar si es o no una despedida, de serlo aprenderla y terminar la ejecución.
+Recuerde consultar el código base en este enlace
